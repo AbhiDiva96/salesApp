@@ -1,15 +1,21 @@
 import { Input } from "./components/inputs"
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Stats } from "./components/stats";
+import { BarChart } from "./components/barChart";
 
 function App() {
 
   return (
     <div>
-     <div className="flex justify-center ">
-         <div className="text-3xl">Sales app</div>
-     </div>
 
-    <Input />
+       <BrowserRouter>
+         <Routes>
+           <Route path="/" element={<Input />} />
+           <Route path="/stats" element={<Stats/>} />
+           <Route path="/barchart" element={<BarChart/>} />
+         </Routes>
+       </BrowserRouter>
 
     </div>
   )

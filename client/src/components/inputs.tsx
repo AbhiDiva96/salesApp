@@ -3,6 +3,7 @@ import { api } from "../api/api";
 import { Product } from "../types/types";
 import { ProductTable } from "./product";
 
+
 export const Input = () => {
     const [month, setMonth] = useState("march");
     const [searchText, setSearchText] = useState(""); // State for search input
@@ -45,13 +46,6 @@ export const Input = () => {
       }, 2000);
 
 
-      const ProductCnt = products.length;
-     
-      if(ProductCnt === 0){
-          setMessage("No products found");
-      }else{
-          setMessage("");
-      }
     // Filter products based on search input
     useEffect(() => {
         if (searchText.trim() === "") {
@@ -79,7 +73,7 @@ export const Input = () => {
         <div>
             <div className="flex justify-between items-center py-4 px-8 bg-gray-200 rounded-lg">
                 {/* Search input */}
-                <div className="w-1/2">
+                <div className="flex justify-center">
                     <input
                         type="text"
                         placeholder="Search by title, description, or price"
@@ -90,16 +84,15 @@ export const Input = () => {
                 </div>
 
                 {/* Month select */}
-                <div className="w-1/2 flex justify-end">
+                <div className="w-1/2  md:flex justify-end">
                     <select
                         className="border-2 border-gray-400 rounded-lg px-4 py-2"
                         value={month}
                         onChange={handleMonthChange}
                     >
-                        {isMarch && <option value="march" selected>March</option>}
                         <option value="january">January</option>
                         <option value="february">February</option>
-                        <option value="march">March</option>
+                    {isMarch && <option value="march" selected>March</option>}
                         <option value="april">April</option>
                         <option value="may">May</option>
                         <option value="june">June</option>
@@ -138,7 +131,6 @@ export const Input = () => {
                     </div>
                 ))
             )}
-
             
         </div>
     );
