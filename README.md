@@ -166,6 +166,9 @@ Create an API to combine the responses from the following APIs and return a sing
 | Route              | Description                                  |
 |--------------------|----------------------------------------------|
 | `/`                | Home page with transactions table and charts|
+| `/stats`            | Statistics page with charts and stats       |
+| `/barchart`         | Bar Chart page with charts and stats        |
+
 
 ---
 
