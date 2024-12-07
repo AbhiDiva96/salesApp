@@ -1,4 +1,4 @@
-# MERN Stack Coding Challenge
+# MERN Stack Coding Challenge Assignment 
 
 ## Project Description
 This project aims to build a web application that fetches data from a third-party API and displays it in a user-friendly interface. The application should provide features such as transaction listing, statistics, bar chart, and pie chart.
